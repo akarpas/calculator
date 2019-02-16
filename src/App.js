@@ -72,29 +72,47 @@ class App extends Component {
       <div className={style.app}>
         <div className={style.calculator}>
           <div className={style.screen}>
-            <input
+            <div
               className={style.input}
-              type="text"
-              value={!input ? '0' : input}
-            />
+            >
+              {!input ? '0' : input}
+            </div>
           </div>
           <div className={style.buttons}>
             <div className={style.left}>
               <div className={style.other}>
                 {other.map(button =>
-                  <button onClick={e => this.handleClick(e, 'other')} id={button.description} className={style.buttonOther}>{button.sign}</button>)}
+                  <button
+                    onClick={e => this.handleClick(e, 'other')}
+                    id={button.description}
+                    className={style.buttonOther}
+                    key={button.description}
+                  >
+                    {button.sign}
+                  </button>)}
               </div>
               <div className={style.numbers}>
                 {numbers.map(number =>
-                  <button onClick={e => this.handleClick(e, 'number')} id={number} className={number === 0
-                    ? style.buttonNumberZero : style.buttonNumber}>
+                  <button
+                    onClick={e => this.handleClick(e, 'number')}
+                    id={number}
+                    className={number === 0 ? style.buttonNumberZero : style.buttonNumber}
+                    key={number}
+                  >
                     {number}
                   </button>)}
               </div>
             </div>
             <div className={style.right}>
               {operations.map(operation =>
-                <button id={operation} onClick={e => this.handleClick(e, 'operation')} className={style.buttonOperation}>{operation}</button>)}
+                <button
+                  id={operation}
+                  onClick={e => this.handleClick(e, 'operation')}
+                  className={style.buttonOperation}
+                  key={operation}
+                >
+                  {operation}
+                </button>)}
             </div>
           </div>
         </div>
