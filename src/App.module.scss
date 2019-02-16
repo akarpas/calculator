@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.calculator {
+  margin-top: 2vh;
+  border: 1px solid black;
+  width: 40vw;
+  height: 60vh;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: calc(100% - 2px);
+  height: 4vh;
+}
