@@ -86,5 +86,12 @@
 .buttonNumber:active,
 .buttonNumberZero:active,
 .buttonOperation:active {
-  background-color: lightcyan;
+  background-color: lightskyblue;
+}
+
+.buttonOther:hover,
+.buttonNumber:hover,
+.buttonNumberZero:hover,
+.buttonOperation:hover {
+  background-color: lightsteelblue;
 }
